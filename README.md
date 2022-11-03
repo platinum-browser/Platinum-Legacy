@@ -27,3 +27,4 @@ This section updates automatically!
 <small>
 I just Replace-All'ed the README to replace all mentions of `Catalyst` with `Platinum`...
 <b>Sshhh, nobody has to know...</b> <br/>
+</small>
