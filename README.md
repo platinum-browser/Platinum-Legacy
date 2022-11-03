@@ -22,4 +22,4 @@ Platinum is a hobby project entirely managed and written by the community. It is
 
 ## Contributors
 
-This section will update automatically as we get contributers.
+This section will update automatically as we get contribut*o*rs.
