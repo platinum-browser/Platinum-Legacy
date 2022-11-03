@@ -24,6 +24,39 @@ Platinum is a hobby project entirely managed and written by the community. It is
 
 This section updates automatically!
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 I just Replace-All'ed the README to replace all mentions of `Catalyst` with `Platinum`...
 
 *Sshhh, nobody has to know...*
