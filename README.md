@@ -29,7 +29,7 @@ npm/pnpm install
 npm/pnpm run tailwind:once
 npm/pnpm run make
 ```
-The output it in the out directory.
+The output is in the out directory.
 
 ## Contributors
 
