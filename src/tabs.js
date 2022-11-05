@@ -148,4 +148,11 @@ function handleTabShortcuts(e) {
         removeTab();
         e.preventDefault();
     }
+    if (isModifier && e.key === "r") {
+        document.querySelector('.current').reload();
+        e.preventDefault();
+    }
+    if (isModifier && e.key === "u") {
+        alert('dunno how to open devtools :(')
+    }
 };
