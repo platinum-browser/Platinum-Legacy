@@ -6,16 +6,16 @@
 /* Custom Tailwind classes */
 @layer components {
 	.tab {
-		@apply transition flex text-center items-center flex-1 max-w-md p-1 overflow-hidden text-sm text-gray-600 rounded-t-xl cursor-pointer whitespace-nowrap;
+		@apply transition flex text-center items-center flex-1 max-w-md p-1 overflow-hidden text-sm text-purple-600 rounded-t-xl cursor-pointer whitespace-nowrap;
 	}
 	.active-tab {
-		@apply transition flex items-center flex-1 max-w-md p-1 overflow-hidden text-sm text-gray-600 dark:text-white bg-gray-100 dark:bg-gray-700 rounded-t-xl cursor-default whitespace-nowrap;
+		@apply transition flex items-center flex-1 max-w-md p-1 overflow-hidden text-sm text-purple-600 dark:text-white bg-purple-100 dark:bg-purple-700 rounded-t-xl cursor-default whitespace-nowrap;
 	}
   .tab-star {
     @apply ml-auto;
   	}
 	.btn {
-		@apply dark:text-white hover:bg-gray-400 text-black rounded-lg ml-2 dark:hover:bg-gray-600 text-center p-1.5 bg-transparent transition
+		@apply dark:text-white hover:bg-purple-400 text-black rounded-lg ml-2 dark:hover:bg-purple-600 text-center p-1.5 bg-transparent transition
 	}
 	.btn img {
 		@apply dark:invert;
@@ -30,7 +30,7 @@
 		@apply w-screen border-solid p-2 border-blue-500 dark:text-white;
 	}
 	.suggestions-box {
-		@apply absolute rounded-b-lg bg-red-200 dark:bg-gray-800 border-blue-500 shadow;
+		@apply absolute rounded-b-lg bg-red-200 dark:bg-purple-800 border-blue-500 shadow;
 	}
 	*:focus {
 		@apply outline-emerald-600;
@@ -46,7 +46,7 @@
 		animation-fill-mode: forwards;
 	}
 	.moreMenuItem:hover {
-		@apply bg-blue-300 text-black rounded-sm dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white;
+		@apply bg-blue-300 text-black rounded-sm dark:hover:bg-purple-600 hover:bg-purple-200 dark:hover:text-white;
 	}
 	@keyframes sliding-ttb {
 		0% {
@@ -60,7 +60,7 @@
 		}
 	}
   .bookmark {
-    @apply transition flex items-center flex-1 max-w-sm p-1 m-0.5 min-w-[12px] overflow-hidden bg-gray-200 dark:bg-gray-900 text-sm rounded cursor-pointer text-gray-600 dark:text-gray-100 whitespace-nowrap;
+    @apply transition flex items-center flex-1 max-w-sm p-1 m-0.5 min-w-[12px] overflow-hidden bg-purple-200 dark:bg-purple-900 text-sm rounded cursor-pointer text-purple-600 dark:text-purple-100 whitespace-nowrap;
   }
   @keyframes sliding-rtl {
 	0% {
