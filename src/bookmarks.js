@@ -68,7 +68,7 @@ function updateBookmarksVar() {
  */
 function storeBookmarks() {
   if (bookmarks.length === 0) bookmarksBar.classList.add("hidden");
-  else bookmarksBar.classList.remove("hidden");
+  // else bookmarksBar.classList.remove("hidden");
 	window.localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
 	updateBookmarksVar();
 }
