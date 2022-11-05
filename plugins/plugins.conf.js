@@ -1,5 +1,5 @@
 var loadPlugins = "true"
 
-const plugins = [
+export const plugins = [
     "example"
 ]

@@ -1,6 +1,6 @@
 {
-    "name": "catalyst",
-    "version": "3.3.0-preview",
+    "name": "platinum",
+    "version": "0.1.0-preview",
     "description": "A minimal Electron Web Browser",
     "main": "main/main.js",
     "private": true,
@@ -13,7 +13,7 @@
         "publish": "electron-forge publish",
         "make": "electron-forge make"
     },
-    "repository": "https://github.com/JaydenDev/Catalyst",
+    "repository": "https://github.com/JaydenDev/Platinum",
     "keywords": [
         "Electron",
         "Browser",
@@ -50,7 +50,7 @@
                     "config": {
                         "repository": {
                             "owner": "JaydenDev",
-                            "name": "Catalyst"
+                            "name": "Platinum"
                         },
                         "draft": true
                     }
@@ -60,7 +60,7 @@
                 {
                     "name": "@electron-forge/maker-squirrel",
                     "config": {
-                        "name": "Catalyst3"
+                        "name": "Platinum3"
                     }
                 },
                 {

@@ -1,5 +1,5 @@
 # taken from https://dev.to/abulka/comment/1dh3k thanks!
-name: Release Catalyst
+name: Release Platinum
 on:
   push:
     tags:

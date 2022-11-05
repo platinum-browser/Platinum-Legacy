@@ -17,7 +17,7 @@ function createWindow() {
             webviewTag: true,
             devTools: true,
         },
-        title: "Catalyst",
+        title: "Platinum",
         icon: path.join(__dirname, "../assets/icon.png"),
     });
     mainWindow.loadFile("./src/index.html");
@@ -52,7 +52,7 @@ try {
 async function checkForUpdate(windowToDialog) {
     try {
         const githubFetch = await fetch(
-            "https://api.github.com/repos/JaydenDev/Catalyst/releases"
+            "https://api.github.com/repos/JaydenDev/Platinum/releases"
         );
         if (!githubFetch.ok) {
             alert("There was an error checking for a new update, check your WiFi connection and try again from the menubar.");
@@ -71,8 +71,8 @@ async function checkForUpdate(windowToDialog) {
                 Number(replaced.startsWith("v") ? replaced.slice(1) : replaced)
             ) {
                 dialog.showMessageBox(windowToDialog, {
-                    message: "An update is available for Catalyst.",
-                    detail: `Go to github.com/JaydenDev/Catalyst/releases to install Catalyst ${release["tag_name"]}`,
+                    message: "An update is available for Platinum.",
+                    detail: `Go to github.com/JaydenDev/Platinum/releases to install Platinum ${release["tag_name"]}`,
                     type: "info",
                 });
                 return;

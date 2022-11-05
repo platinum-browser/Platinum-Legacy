@@ -1,5 +1,5 @@
 # Contributing
-While contributing with PRs and Commits, please make sure to follow the following Catalyst Project contribution guidelines
+While contributing with PRs and Commits, please make sure to follow the following Platinum Project contribution guidelines
 ## Rules
 1. Don't make fights in PRs.
 2. Make sure to be ready to actively answer questions about your PRs. 

@@ -1,26 +1,36 @@
-var content;
 function checkPlugin(namespace) {
-    let content = fetch("../plugins/" + namespace + "/plugin.js").then(res => res.text);
-    var ret = Boolean(1);
-    function testCondition(condition, errcod) {
-        if (condition) {
-            console.err(`Could not load plugin ${namespace} because of error: ${errcod}`)
-            return false;
-        }
-  }
+    // TODO: implement plugin scanning
 }
 
-function loadPlugs() {   
+var loaded_plugins = [];
+let plugins = require('plugins/plugins.conf.js').plugins
+
+function injectAll() {   
     // add a script tag to html to load every script in plugins variable
     for (let i = 0; i < plugins.length; i++) {
-            let script = document.createElement('script');
-            script.src = "../plugins/" + plugins[i] + "/plugin.js";
-            document.body.appendChild(script);
-            console.log("DEBUG: Plugin " + plugins[i] + " has been injected.")
-        }
+        injectPlugin(plugins[i])
+    }
+}
+
+function injectPlugin(namespace) {
+    try {
+        let script = document.createElement('script');
+        script.src = "../plugins/" + namespace + "/plugin.js";
+        document.body.appendChild(script);
+        loaded_plugins.push(namespace)
+
+        console.log("DEBUG: Plugin " + namespace + " has been injected.")
+    } catch(e) {
+        console.error(`DEBUG: Error while loading plugin ${namespace}`)
+    }
+}
+
+function executeAll() {
+    
 }
 
 if (loadPlugins == "true") {
-    loadPlugs();
+    inject()
+    execute()
     console.log("DEBUG: Plugins are enabled.")
 }

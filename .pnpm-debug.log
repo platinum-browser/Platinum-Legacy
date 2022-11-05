@@ -12,7 +12,7 @@
   },
   "2 error pnpm": {
     "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
-    "prefix": "/home/jmwills/Desktop/Catalyst",
+    "prefix": "/home/jmwills/Desktop/Platinum",
     "err": {
       "name": "pnpm",
       "message": "not found: isntall",
