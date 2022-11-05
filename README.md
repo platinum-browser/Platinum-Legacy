@@ -31,6 +31,10 @@ npm/pnpm run make
 
 The output is in the out directory.
 
+## About this fork
+
+This fork is not supposed to replace Platinum, it is more of a testbed for the more stable Platinum releases.
+
 ## Contributors
 
 This section will update automatically as we get contribut*o*rs.
