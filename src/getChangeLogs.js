@@ -10,7 +10,7 @@ fetch("../package.json")
                 const desc = document.getElementById('desc');
                 desc.innerHTML = marked.parse(res.body);
                 });
-            });
+        });
 
 function getVerDisp() {
     fetch("../package.json") 

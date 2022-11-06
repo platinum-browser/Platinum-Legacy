@@ -67,10 +67,15 @@ function updateBookmarksVar() {
  * Stores the bookmarks in localstorage and runs updateBookmarksVar
  */
 function storeBookmarks() {
+<<<<<<< HEAD
   if (bookmarks.length === 0) bookmarksBar.classList.add("hidden");
   // else bookmarksBar.classList.remove("hidden");
+=======
+	if (bookmarks.length === 0) bookmarksBar.classList.add("hidden");
+	//else bookmarksBar.classList.remove("hidden");
+>>>>>>> 38062090b4962591978249d7cdf4a2dc7b8d1b04
 	window.localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
 	updateBookmarksVar();
 }
 
-addBookmarkToBar('https://co.wukko.me/', 'Upload')
+//addBookmarkToBar('https://co.wukko.me/', 'Upload')

@@ -152,4 +152,10 @@ function handleTabShortcuts(e) {
         document.querySelector('.current').reload();
         e.preventDefault();
     }
+<<<<<<< HEAD
+=======
+    if (isModifier && e.key === "u") {
+        alert('dunno how to open devtools :(')
+    }
+>>>>>>> 38062090b4962591978249d7cdf4a2dc7b8d1b04
 };
