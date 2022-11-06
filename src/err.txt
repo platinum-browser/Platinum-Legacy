@@ -1,1 +1,5 @@
-This page has failed to load, check your connection or contact the website owner.
+This page has failed to load. Here are some things you can do:
+    1. Check your internet connection.
+    2. If there isn't a problem, maybe check your firewall or proxy settings.
+    3. If all else fails, somehow contact the website owner.
+    4. If all of the above fails... WE'RE ALL GONNA DIE
