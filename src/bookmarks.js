@@ -1,4 +1,3 @@
-
 // initialise global variables
 const bookmarksBar = document.getElementById("bookmarks");
 // get bookmarks initialised

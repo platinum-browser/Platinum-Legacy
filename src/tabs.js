@@ -153,6 +153,7 @@ function handleTabShortcuts(e) {
         e.preventDefault();
     }
     if (isModifier && e.key === "u") {
-        alert('dunno how to open devtools :(')
+        inspectTab();
+        e.preventDefault();
     }
 };

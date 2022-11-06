@@ -20,6 +20,29 @@ Platinum is a hobby project entirely managed and written by the community. It is
 3. Scroll down and click on the file for your specific platform (Windows = `.exe`, Debian Linux distros = `.deb`, etc.)
 4. Open the downloaded file then let Platinum install!
 
+## Building from source
+### Windows
+Run
+```
+git clone https://github.com/redstone-scratch/Platinum && cd Platinum
+npm/pnpm install
+npm/pnpm run tailwind:once
+npm/pnpm run make
+```
+The output is in the out directory.
+
+### Linux
+Run
+```
+git clone https://github.com/redstone-scratch/Platinum && cd Platinum
+bash build.sh
+```
+The output is in the out directory.
+
+## About this fork
+This fork is meant to be a way to easily test and review new features before they reach stable Platinum.
+If you care even a bit about stability, don't use this as your daily driver. Instead use [stable platinum](https://github.com/redstone-scratch/Platinum).
+
 ## Contributors
 
 This section will update automatically as we get contribut*o*rs.
