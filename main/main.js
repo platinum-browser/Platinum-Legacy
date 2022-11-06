@@ -17,6 +17,7 @@ function createWindow() {
             webviewTag: true,
             devTools: true,
         },
+        autoHideMenuBar: true,
         title: "Platinum",
         icon: path.join(__dirname, "../assets/icon.png"),
     });
@@ -127,6 +128,13 @@ const template = [{
         accelerator: "CmdOrCtrl+I",
         click: function() {
             mainWindow.webContents.toggleDevTools();
+        }
+    },
+    {
+        label: "View Source",
+        accelerator: "CmdOrCtrl+U",
+        click: () => {
+            mainWindow.webContents
         }
     }/*
     {

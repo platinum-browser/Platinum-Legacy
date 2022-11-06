@@ -45,7 +45,12 @@ async function createTab(url) {
     document.getElementById("webviews").appendChild(view);
     switchTabs(randomHash);
 }
+
 createTab();
+
+function viewTabSource(tabHash) {
+    
+}
 
 /**
  * Switches the tab to the selected one
@@ -153,7 +158,7 @@ function handleTabShortcuts(e) {
         e.preventDefault();
     }
     if (isModifier && e.key === "u") {
-        inspectTab();
+        viewTabSource();
         e.preventDefault();
     }
 };

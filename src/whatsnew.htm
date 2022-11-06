@@ -11,11 +11,11 @@
     <br />
     <p id="desc"></p>
     <script>
-            fetch("../package.json") 
-    	.then(response => response.json()) 
-        .then(data =>
-            document.querySelector('#ver').innerText = data.version,
-        )
+        fetch("../package.json") 
+            .then(response => response.json()) 
+            .then(data =>
+                document.querySelector('#ver').innerText = data.version,
+            )
     </script>
     <script src="./getChangeLogs.js"></script>
 </body>

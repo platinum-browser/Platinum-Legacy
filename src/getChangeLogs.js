@@ -3,7 +3,7 @@ fetch("../package.json")
     .then(data =>
         function() {
             version = data.version;
-            url = `https://api.github.com/repos/jaydendev/Platinum/releases/tags/${data.version}`;
+            url = `https://api.github.com/repos/redstone-scratch/Platinum/releases/tags/${data.version}`;
             fetch(url)
             .then(res => res.json())
             .then(res => { 
