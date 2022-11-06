@@ -39,6 +39,10 @@ bash build.sh
 ```
 The output is in the out directory.
 
+## About this fork
+This fork is meant to be a way to easily test and review new features before they reach stable Platinum.
+If you care even a bit about stability, don't use this as your daily driver. Instead use [stable platinum](https://github.com/redstone-scratch/Platinum).
+
 ## Contributors
 
 This section will update automatically as we get contribut*o*rs.
