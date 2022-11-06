@@ -1,6 +1,6 @@
 ![image](https://img.shields.io/github/issues/redstone-scratch/Platinum?color=%230f172a&style=for-the-badge) ![image](https://img.shields.io/github/forks/redstone-scratch/Platinum?color=%230f172a&style=for-the-badge) ![image](https://img.shields.io/github/stars/redstone-scratch/Platinum?color=%230f172a&style=for-the-badge) ![image](https://img.shields.io/github/license/redstone-scratch/Platinum?color=%230f172a&style=for-the-badge)
 # Platinum 
-An amazing and elegant ElectronJS web browser. A fork of the [Platinum](https://github.com/JaydenDev/Platinum) browser.
+An amazing and elegant ElectronJS web browser. A fork of the [Catalyst](https://github.com/JaydenDev/Catalyst) browser.
 
 ![image](https://user-images.githubusercontent.com/92550746/194955977-c37b21f6-5ec3-4d1a-939f-c27b23cd9a9a.png)
 
