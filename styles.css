@@ -32,9 +32,6 @@
 	.suggestions-box {
 		@apply absolute rounded-b-lg bg-red-200 dark:bg-gray-800 border-blue-500 shadow;
 	}
-	.cb {
-		@apply rounded-full p-3;
-	}
 	*:focus {
 		@apply outline-emerald-600;
 	}
