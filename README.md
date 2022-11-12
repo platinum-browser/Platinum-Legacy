@@ -6,7 +6,7 @@ An amazing and elegant ElectronJS web browser. A fork of the [Catalyst](https://
 
 ---
 
-Platinum is a hobby project entirely managed and written by the community. It is an Electron/Chromium based web browser that really doesn't have a purpose, the contributors are below
+Platinum is a hobby project entirely managed and written by the community. It is an Electron/Chromium based web browser that aims to make Electron browsers viable. the contributors are below
 
 ## Installation Instructions
 1. Go to the Releases tab on the GitHub repo (or just click [this link](https://github.com/redstone-scratch/Platinum/releases)) or click on the release underneath the "Releases" text.
@@ -21,23 +21,38 @@ Platinum is a hobby project entirely managed and written by the community. It is
 4. Open the downloaded file then let Platinum install!
 
 ## Building from source
-### Windows
+### On Windows
 Run
 ```
 git clone https://github.com/redstone-scratch/Platinum && cd Platinum
-npm/pnpm install
-npm/pnpm run tailwind:once
-npm/pnpm run make
+.\build
 ```
 The output is in the out directory.
 
-### Linux
+### On Linux
 Run
 ```
 git clone https://github.com/redstone-scratch/Platinum && cd Platinum
 bash build.sh
 ```
 The output is in the out directory.
+
+## Dev instructions
+If you need to quickly test a feature:
+### Windows
+Run
+```
+.\dev
+```
+
+
+### Linux
+Run
+```
+bash dev.sh
+```
+
+Either way, Platinum will then launch in dev. It's configured by default to enable :sparkle: special testing features.
 
 ## Contributors
 
@@ -118,4 +133,4 @@ The output is in the out directory.
 </tr>
 </table>
 
-This section will update automatically as we get contribut*o*rs.
+This section will update automatically as we get contributors.

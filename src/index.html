@@ -1,126 +1,242 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Platinum</title>
     <script src="./tabs.js" defer></script>
     <script src="./search.js" defer></script>
     <script src="./preferences.js" defer></script>
     <script src="../plugins/plugins.conf.js" defer></script>
     <script src="./lsSaveHandler.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="../output/tailwind.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+    <link rel="stylesheet" type="text/css" href="../output/tailwind.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<body class="bg min-w-full bg-gray-200 dark:bg-gray-900 min-h-screen bg-white/0 overflow-hidden">
-    <div id="loading" class="fixed z-40 flex items-center justify-center w-full h-full transition duration-500 bg-gray-50 dark:bg-gray-900">
-        <img src="../assets/icon.png" alt="loading..." class="animate-spin h-1/2 aspect-square">
-    </div>
-    </div>
+  <body
+    class="bg min-w-full bg-gray-200 dark:bg-gray-900 min-h-screen bg-white/0 overflow-hidden"
+  >
+    <div
+      id="loading"
+      class="fixed z-40 flex items-center justify-center w-full h-full transition duration-500 bg-gray-50 dark:bg-gray-900"
+    >
+      <img
+        src="../assets/icon.png"
+        alt="loading..."
+        class="animate-spin h-1/2 aspect-square"
+      />
     </div>
     <!-- Tab bar -->
     <div class="flex items-center px-1.5 py-1 mt-0 bg-white dark:bg-gray-800">
-        <div id="tabs-bar" class="flex items-center flex-1 space-x-1 overflow-auto no-scrollbar">
-            <!-- tabs are inserted with JS -->
-        </div>
-        <div class="inline-flex px-1">
-            <button id="create-tab" onclick="createTab()" class="btn"><img src="../assets/icons/plus.svg"
-          alt="Create tab"></button>&nbsp;
-            <button id="remove-tab" onclick="removeTab()" class="btn"><img src="../assets/icons/x.svg"
-          alt="Remove tab"></button>&nbsp;
-            <button id="remove-tab" onclick="bookmarkCurrentTab()" class="btn"><img src="../assets/icons/star.svg"
-          width="" alt="Bookmark tab" disabled></button>
-        </div>
+      <div
+        id="tabs-bar"
+        class="flex items-center flex-1 space-x-1 overflow-auto no-scrollbar"
+      >
+        <!-- tabs are inserted with JS -->
+      </div>
+      <div class="inline-flex px-1">
+        <button id="create-tab" onclick="createTab()" class="btn">
+          <img src="../assets/icons/plus.svg" alt="Create tab" /></button
+        >&nbsp;
+        <button id="remove-tab" onclick="removeTab()" class="btn">
+          <img src="../assets/icons/x.svg" alt="Remove tab" /></button
+        >&nbsp;
+        <button id="remove-tab" onclick="bookmarkCurrentTab()" class="btn">
+          <img
+            src="../assets/icons/star.svg"
+            width=""
+            alt="Bookmark tab"
+            disabled
+          />
+        </button>
+      </div>
     </div>
     <!-- Utility bar -->
     <div class="w-full flex pb-1 dark:text-gray-900 bg-white dark:bg-gray-800">
-        <button id="back" class="btn"><img
-        src="../assets/icons/arrow-left.svg" alt="Backward"></button>&nbsp;
-        <button id="forward" class="btn"><img
-        src="../assets/icons/arrow-right.svg" alt="Forward"></button>&nbsp;
-        <input id="searchbar" type="text" class="rounded-3xl outline-0 dark:text-white min-w-fit w-[95%] text-sm bg-gray-100 dark:bg-gray-700 dark:text-gray-900 py-1 px-2" placeholder="Search or type a URL" />&nbsp;
-        <button id="reload" class="btn"><img
-        src="../assets/icons/arrow-clockwise.svg" alt="Reload"></button>&nbsp;
-        <button id="more-btn" class="btn"><img
-        src="../assets/icons/three-dots-vertical.svg" alt="More menu"></button>&nbsp;
+      <button id="back" class="btn">
+        <img src="../assets/icons/arrow-left.svg" alt="Backward" /></button
+      >&nbsp;
+      <button id="forward" class="btn">
+        <img src="../assets/icons/arrow-right.svg" alt="Forward" /></button
+      >&nbsp;
+      <input
+        id="searchbar"
+        type="text"
+        class="rounded-3xl outline-0 dark:text-white min-w-fit w-[95%] text-sm bg-gray-100 dark:bg-gray-700 dark:text-gray-900 py-1 px-2"
+        placeholder="Search or type a URL"
+      />&nbsp;
+      <button id="reload" class="btn">
+        <img src="../assets/icons/arrow-clockwise.svg" alt="Reload" /></button
+      >&nbsp;
+      <button id="more-btn" class="btn">
+        <img
+          src="../assets/icons/three-dots-vertical.svg"
+          alt="More menu"
+        /></button
+      >&nbsp;
     </div>
     <!-- More menu -->
-    <div id="more-menu" class="sliding-rtl shadow-lg absolute m-4 bg-white dark:bg-gray-800 dark:text-white text-gray-900 h-fit rounded-lg p-3 w-36 blurred float-right hidden right-0 ">
-        <ul class="justify-center align-middle flex-wrap max-w-sm">
-            <li class="moreMenuItem flex cursor-pointer" onclick="togglePreferences()">
-                <img class="rounded-sm dark:invert p-1" src="../assets/icons/gear-fill.svg" class="inline-flex mb-1 px-2" alt="Settings">&nbsp;Preferences
-            </li>&nbsp;
-            <li class="moreMenuItem cursor-pointer flex" onclick="inspectTab()">
-                <img class="rounded-sm dark:invert p-1" src="../assets/icons/code.svg" class="inline-flex mb-1 px-2" alt="Tools">&nbsp;Inspect tab
-            </li>&nbsp;
-            <li onClick="openFeedback()" class="moreMenuItem flex cursor-pointer">
-                <img class="rounded-sm dark:invert p-1" src="../assets/icons/bug.svg" class="inline-flex mb-1 px-2" alt="this image has not loaded properly">&nbsp;Feedback
-            </li>&nbsp;
-            <li onClick="openGithub()" class="moreMenuItem flex cursor-pointer">
-                <img class="rounded-sm dark:invert p-1" src="../assets/icons/github.svg" class="inline-flex mb-1 px-2" alt="this image has not loaded properly">&nbsp;Development
-            </li>
-            &nbsp;
-            <a onClick="createTab('./dino.htm')" class="moreMenuItem flex cursor-pointer">
-                <p>Play the dino game!</p>
-            </a>
-            <a onClick="downloadCurrentPage()" class="moreMenuItem flex cursor-pointer">
-                <p>Download current tab page as HTML.</p>
-            </a>
-        </ul>
+    <div
+      id="more-menu"
+      class="sliding-rtl shadow-lg absolute m-4 bg-white dark:bg-gray-800 dark:text-white text-gray-900 h-fit rounded-lg p-3 w-36 blurred float-right hidden right-0"
+    >
+      <ul class="justify-center align-middle flex-wrap max-w-sm">
+        <li
+          class="moreMenuItem flex cursor-pointer"
+          onclick="togglePreferences()"
+        >
+          <img
+            class="rounded-sm dark:invert p-1"
+            src="../assets/icons/gear-fill.svg"
+            class="inline-flex mb-1 px-2"
+            alt="Settings"
+          />&nbsp;Preferences
+        </li>
+        &nbsp;
+        <li class="moreMenuItem cursor-pointer flex" onclick="inspectTab()">
+          <img
+            class="rounded-sm dark:invert p-1"
+            src="../assets/icons/code.svg"
+            class="inline-flex mb-1 px-2"
+            alt="Tools"
+          />&nbsp;Inspect tab
+        </li>
+        &nbsp;
+        <li onClick="openFeedback()" class="moreMenuItem flex cursor-pointer">
+          <img
+            class="rounded-sm dark:invert p-1"
+            src="../assets/icons/bug.svg"
+            class="inline-flex mb-1 px-2"
+            alt="this image has not loaded properly"
+          />&nbsp;Feedback
+        </li>
+        &nbsp;
+        <li onClick="openGithub()" class="moreMenuItem flex cursor-pointer">
+          <img
+            class="rounded-sm dark:invert p-1"
+            src="../assets/icons/github.svg"
+            class="inline-flex mb-1 px-2"
+            alt="this image has not loaded properly"
+          />&nbsp;Development
+        </li>
+        &nbsp;
+        <a
+          onClick="createTab('./dino.htm')"
+          class="moreMenuItem flex cursor-pointer"
+        >
+          <p>Play the dino game!</p>
+        </a>
+        <a
+          onClick="downloadCurrentPage()"
+          class="moreMenuItem flex cursor-pointer"
+        >
+          <p>Download current tab page as HTML.</p>
+        </a>
+      </ul>
     </div>
     <!-- Bookmarks -->
     <div id="bookmarks" class="flex px-1 mb-0.2 bg-white dark:bg-gray-800">
-        <!-- bookmarks inserted with JS -->
+      <!-- bookmarks inserted with JS -->
     </div>
     <!-- Preferences -->
-    <div id="preferences-box" class="sliding-rtl m-4 rounded-lg fixed right-0 shadow-lg bg-gray-200 p-3 dark:bg-gray-800 w-[20%]  hidden max-h-screen h-fit text-gray-900 dark:text-gray-50">
-        <h1 class="font-bold text-xl">Preferences</h1>
-        <label class="relative flex justify-between items-center group p-2 text-lg">
-            Dark Mode
-            <input type="checkbox" class="absolute left-1/2 py-1 -translate-x-1/2 w-full h-full peer appearance-none rounded-md" id="pref-darkmode" />
-            <span class="w-16 h-8 flex items-center flex-shrink-0 ml-4 p-1 dark:bg-gray-700 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-purple-800 after:w-8 after:h-8 after:dark:bg-gray-800 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6 group-hover:after:translate-x-[0.5]"></span>
-          </label>
-        <br />
-        <label class="relative flex justify-between items-center group p-2 text-lg">
-            Search Autocomplete
-            <input type="checkbox" class="absolute left-1/2 py-1 -translate-x-1/2 w-full h-full peer appearance-none rounded-md" id="pref-autocomplete" />
-            <span class="w-16 h-8 flex items-center flex-shrink-0 ml-4 p-1 dark:bg-gray-700 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-purple-800 after:w-8 after:h-8 after:dark:bg-gray-800 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6 group-hover:after:translate-x-[0.5]"></span>
-          </label>
-        <br />
-        <label class="relative flex justify-between items-center group p-2 text-lg">
-            Bookmarks Bar
-            <input type="checkbox" class="absolute left-1/2 py-1 -translate-x-1/2 w-full h-full peer appearance-none rounded-md" id="pref-bookmarks" />
-            <span class="w-16 h-8 flex items-center flex-shrink-0 ml-4 p-1 dark:bg-gray-700 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-purple-800 after:w-8 after:h-8 after:dark:bg-gray-800 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6 group-hover:after:translate-x-[0.5]"></span>
-          </label>
-        <br />
-        <label for="pref-strt">Startup Page</label>
-        <input class="text-black p-1.5 rounded-sm" id="pref-strt" class=""/>
-        <p class="text-sm">Sets a custom startup page.</p>
-        <b>(You must restart Platinum every time this is changed)</b>
-        <br />
-        <br />
-        <label class="relative flex justify-between items-center group p-2 text-lg">
-            Forced Website Dark Mode
-            <input type="checkbox" class="absolute left-1/2 py-1 -translate-x-1/2 w-full h-full peer appearance-none rounded-md" id="pref-dm" />
-            <span class="w-16 h-8 flex items-center flex-shrink-0 ml-4 p-1 dark:bg-gray-700 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-purple-800 after:w-8 after:h-8 after:dark:bg-gray-800 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6 group-hover:after:translate-x-[0.5]"></span>
-          </label>
-        <br />
-        <br />
-                <button onclick="clearData()" class="btn">
-      Clear Data</button>
-                <button onclick="togglePreferences()" class="btn">Close
-      Preferences</button>
-                <button onclick="lsSaveBookmarks()" class="btn">Export Data</button>
+    <div
+      id="preferences-box"
+      class="sliding-rtl m-4 rounded-lg fixed right-0 shadow-lg bg-gray-200 p-3 dark:bg-gray-800 w-[20%] hidden max-h-screen h-fit text-gray-900 dark:text-gray-50"
+    >
+      <h1 class="font-bold text-xl">Preferences</h1>
+      <label
+        class="relative flex justify-between items-center group p-2 text-lg"
+      >
+        Dark Mode
+        <input
+          type="checkbox"
+          class="absolute left-1/2 py-1 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
+          id="pref-darkmode"
+        />
+        <span
+          class="w-16 h-8 flex items-center flex-shrink-0 ml-4 p-1 dark:bg-gray-700 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-purple-800 after:w-8 after:h-8 after:dark:bg-gray-800 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6 group-hover:after:translate-x-[0.5]"
+        ></span>
+      </label>
+      <br />
+      <label
+        class="relative flex justify-between items-center group p-2 text-lg"
+      >
+        Search Autocomplete
+        <input
+          type="checkbox"
+          class="absolute left-1/2 py-1 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
+          id="pref-autocomplete"
+        />
+        <span
+          class="w-16 h-8 flex items-center flex-shrink-0 ml-4 p-1 dark:bg-gray-700 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-purple-800 after:w-8 after:h-8 after:dark:bg-gray-800 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6 group-hover:after:translate-x-[0.5]"
+        ></span>
+      </label>
+      <br />
+      <label
+        class="relative flex justify-between items-center group p-2 text-lg"
+      >
+        Bookmarks Bar
+        <input
+          type="checkbox"
+          class="absolute left-1/2 py-1 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
+          id="pref-bookmarks"
+        />
+        <span
+          class="w-16 h-8 flex items-center flex-shrink-0 ml-4 p-1 dark:bg-gray-700 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-purple-800 after:w-8 after:h-8 after:dark:bg-gray-800 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6 group-hover:after:translate-x-[0.5]"
+        ></span>
+      </label>
+      <br />
+      <label for="pref-strt">Startup Page</label>
+      <input class="text-black p-1.5 rounded-sm" id="pref-strt" class="" />
+      <p class="text-sm">Sets a custom startup page.</p>
+      <b>(You must restart Platinum every time this is changed)</b>
+      <br />
+      <br />
+      <label
+        class="relative flex justify-between items-center group p-2 text-lg"
+      >
+        Forced Website Dark Mode
+        <input
+          type="checkbox"
+          class="absolute left-1/2 py-1 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
+          id="pref-dm"
+        />
+        <span
+          class="w-16 h-8 flex items-center flex-shrink-0 ml-4 p-1 dark:bg-gray-700 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-purple-800 after:w-8 after:h-8 after:dark:bg-gray-800 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6 group-hover:after:translate-x-[0.5]"
+        ></span>
+      </label>
+      <br />
+      <br />
+      <button onclick="clearData()" class="btn">Clear Data</button>
+      <button onclick="togglePreferences()" class="btn">
+        Close Preferences
+      </button>
+      <button onclick="lsSaveBookmarks()" class="btn">Export Data</button>
     </div>
     <!-- Suggestions -->
-    <div class="sliding-ttb bg-gray-200 dark:bg-gray-800 suggestions-box" id="autocomplete-suggestions">
-        <!-- suggestions made with js -->
+    <div
+      class="sliding-ttb bg-gray-200 dark:bg-gray-800 suggestions-box"
+      id="autocomplete-suggestions"
+    >
+      <!-- suggestions made with js -->
     </div>
     <!-- Welcome to Platinum page -->
-    <div id="welcomepage" class="hidden h-fit shadow-xl border-2 dark:border-0 bg-gray-200 dark:bg-gray-900 dark:text-white p-1.5 -l w-full rounded-b-sm">
-        <h1 class="dark:text-white font-bold text-xl">Welcome to Platinum!</h1>&nbsp;
-        <button class="rounded-sm p-1 bg-white text-black w-fit" onClick="closeWelcome()">Close</button>&nbsp;
-        <button class="rounded-sm p-1 bg-white  text-black w-fit" onClick="togglePreferences()">Customize Your Browser!</button>&nbsp;
+    <div
+      id="welcomepage"
+      class="hidden h-fit shadow-xl border-2 dark:border-0 bg-gray-200 dark:bg-gray-900 dark:text-white p-1.5 -l w-full rounded-b-sm"
+    >
+      <h1 class="dark:text-white font-bold text-xl">Welcome to Platinum!</h1>
+      &nbsp;
+      <button
+        class="rounded-sm p-1 bg-white text-black w-fit"
+        onClick="closeWelcome()"
+      >
+        Close</button
+      >&nbsp;
+      <button
+        class="rounded-sm p-1 bg-white text-black w-fit"
+        onClick="togglePreferences()"
+      >
+        Customize Your Browser!</button
+      >&nbsp;
     </div>
     <!-- Webviews generated with JS -->
     <div id="webviews"></div>
@@ -132,6 +248,5 @@
     <script src="./bookmarks.js"></script>
     <script src="./listeners.js"></script>
     <script src="./pluginWorker.js" defer></script>
-</body>
-
+  </body>
 </html>
