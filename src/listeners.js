@@ -9,6 +9,10 @@ document.getElementById("more-btn").addEventListener("click", () => {
     document.querySelector('#more-btn').classList.toggle("bg-gray-400")
 });
 
+if (!localStorage.getItem('ctlyststrppg')) {
+    localStorage.setItem('ctlyststrppg', './home.html')
+}
+
 strt.addEventListener('change', () => {
     localStorage.setItem('ctlyststrppg', strt.value)
 }   
