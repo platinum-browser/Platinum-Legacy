@@ -99,16 +99,15 @@
         <br />
         <label class="relative flex justify-between items-center group p-2 text-lg">
             Forced Website Dark Mode
+            <span class="bg-purple-800 text-white">BETA</span>
             <input type="checkbox" class="absolute left-1/2 py-1 -translate-x-1/2 w-full h-full peer appearance-none rounded-md" id="pref-dm" />
             <span class="w-16 h-8 flex items-center flex-shrink-0 ml-4 p-1 dark:bg-gray-700 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-purple-800 after:w-8 after:h-8 after:dark:bg-gray-800 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6 group-hover:after:translate-x-[0.5]"></span>
           </label>
         <br />
         <br />
-                <button onclick="clearData()" class="btn">
-      Clear Data</button>
-                <button onclick="togglePreferences()" class="btn">Close
-      Preferences</button>
-                <button onclick="lsSaveBookmarks()" class="btn">Export Data</button>
+        <button onclick="clearData()" class="btn">Clear Data</button>
+        <button onclick="togglePreferences()" class="btn">Close Preferences</button>
+        <button onclick="lsSaveBookmarks()" class="btn">Export Data</button>
     </div>
     <!-- Suggestions -->
     <div class="sliding-ttb bg-gray-200 dark:bg-gray-800 suggestions-box" id="autocomplete-suggestions">
@@ -120,6 +119,7 @@
         <button class="rounded-sm p-1 bg-white text-black w-fit" onClick="closeWelcome()">Close</button>&nbsp;
         <button class="rounded-sm p-1 bg-white  text-black w-fit" onClick="togglePreferences()">Customize Your Browser!</button>&nbsp;
     </div>
+    ;
     <!-- Webviews generated with JS -->
     <div id="webviews"></div>
     <script src="../lib/functions.js"></script>

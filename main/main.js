@@ -16,6 +16,9 @@ function createWindow() {
         webPreferences: {
             webviewTag: true,
             devTools: true,
+            nodeIntegration: true,
+            contextIsolation: false,
+            preload: path(__dirname, 'preload.js')
         },
         autoHideMenuBar: true,
         title: "Platinum",
