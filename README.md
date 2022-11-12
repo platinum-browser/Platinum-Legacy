@@ -52,7 +52,7 @@ Run
 bash dev.sh
 ```
 
-Either way, Platinum will then launch in dev. It's configured by default to enable :sparkle: special testing features.
+Either way, Platinum will then launch in dev. In the future, Platinum will be configured by default to enable ✨ special testing features.
 
 ## Contributors
 
