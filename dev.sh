@@ -1,4 +1,3 @@
 #!/bin/bash
 
-npm run tailwind:once
-npm run start
+npm run dev
