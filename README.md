@@ -122,9 +122,9 @@ Either way, Platinum will then launch in dev. In the future, Platinum will be co
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/CocoTheMii>
-            <img src=https://avatars.githubusercontent.com/u/44563370?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=CocoTheMii/>
+            <img src=https://avatars.githubusercontent.com/u/44563370?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Coco/>
             <br />
-            <sub style="font-size:14px"><b>CocoTheMii</b></sub>
+            <sub style="font-size:14px"><b>Coco</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
