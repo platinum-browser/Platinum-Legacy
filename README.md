@@ -1,6 +1,5 @@
-# IMPORTANT NOTICE
-
-I'm working on a version of Platinum that is not based on Catalyst. When it's ready, I'll be putting it in its own github repo, and archiving this one.
+# Platinum is no longer in development at all.
+### It will not continue to recieve any updates or bugfixes at all. Not even the new version.
 
 ![image](https://img.shields.io/github/issues/redstone-scratch/Platinum?color=%230f172a&style=for-the-badge) ![image](https://img.shields.io/github/forks/redstone-scratch/Platinum?color=%230f172a&style=for-the-badge) ![image](https://img.shields.io/github/stars/redstone-scratch/Platinum?color=%230f172a&style=for-the-badge) ![image](https://img.shields.io/github/license/redstone-scratch/Platinum?color=%230f172a&style=for-the-badge) ![image](https://img.shields.io/github/downloads/platinum-browser/Platinum/total?style=for-the-badge)
 # Platinum 
